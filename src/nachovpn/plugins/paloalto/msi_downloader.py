@@ -88,8 +88,8 @@ if __name__ == "__main__":
 
     downloader = MSIDownloader(output_dir=args.output_dir)
 
+    x86_version, x64_version = downloader.get_latest_versions()
     if args.version:
-        x86_version, x64_version = downloader.get_latest_versions()
         print(f"Latest x86 version: {x86_version.split('/')[0]}")
         print(f"Latest x64 version: {x64_version.split('/')[0]}")
 
